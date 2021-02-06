@@ -66,7 +66,7 @@ ul{
 }
 a{
     text-decoration: none;
-    color:var(--text-color);
+    /* color:var(--text-color); */
 }
 img{
     max-width: 100%;
@@ -278,42 +278,39 @@ img{
     color: var(--first-color-dark);
     margin-bottom: var(--mb-2);
 }
-.skills__data{
-    position: relative;
+.skills__container{
+    width: 100%;
+    padding-left: 8vw;
+    padding-right: 8vw;
+    margin-bottom: 3vh;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+}
+.skills__img{
+    width: 100px;
+    height: 100px;
+    float:left;
+    padding: 2%;
+}
+
+.works1__container{
     display:flex;
-    justify-content: space-between;
-    margin: 0 var(--mb-2);
-    margin-bottom: var(--mb-4);
+    flex-flow: row;
 }
-.skills__name{
-    text-transform: uppercase;
+
+.work{
+    border: 1px solid #CC4B2C;
+    padding: 5%;
+    width: 100vw;
+    border-radius: 5px;
 }
-.skills__bar{
-    position: absolute;
-    bottom: -.75rem;
-    height: .25rem;
-    background-color: var(--first-color);
+.work-title{
+    font-weight: bold;
 }
-.skills__html{
-    width:80%;
-}
-.skills__js{
-    width:90%;
-}
-.skills__jquery{
-    width:70%;
-}
-.skills__react{
-    width:70%;
-}
-.skills__node{
-    width:70%;
-}
-.skills__php{
-    width:70%;
-}
-.skills__firebase{
-    width:80%;
+.work-more{
+    color:#CC4B2C;
 }
 .education__container{
     row-gap: 2rem;
@@ -379,6 +376,8 @@ img{
 .works__container{
     justify-content: center;
     row-gap: 2rem;
+    /* max-width: 40%; */
+    height: auto;
 }
 .works__img{
     position: relative;
@@ -570,7 +569,23 @@ img{
         margin-left: auto;
         margin-right: auto;
     }
+}
+
+@media screen and (max-width: 1024px){
     .works__container{
-        grid-template-columns: repeat(1,1fr);
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+    }
+}
+@media screen and (max-width: 768px){
+    .works__container{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 1024px){
+    .works__container{
+        width: 40%;
     }
 }
